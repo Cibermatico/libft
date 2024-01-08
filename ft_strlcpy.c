@@ -1,7 +1,9 @@
+#include <string.h>
+
 unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 {
-	unsigned int	count;
-	unsigned int	i;
+	size_t	count;
+	size_t	i;
 
 	count = 0;
 	while (src[count] != '\0')
