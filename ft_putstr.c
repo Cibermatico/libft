@@ -1,18 +1,24 @@
-#include <unistd.h>
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lsquarci <lsquarci@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/01/09 19:24:50 by lsquarci          #+#    #+#             */
+/*   Updated: 2024/01/09 19:24:50 by lsquarci         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
 
 void ft_putstr(char *str)
 {
-    int i = 0;
-    while (str[i] != '\0')
-    {
-        write(1,&str[i],1);
-        i++;
-    }
-    
-}
-
-int main(void)
-{
-    ft_putstr("ciaoo");
+	int i = 0;
+	while (str[i] != '\0')
+	{
+		write(1,&str[i],1);
+		i++;
+	}
+ 
 }

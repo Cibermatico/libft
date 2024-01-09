@@ -1,35 +1,37 @@
-/*DESCRIPTION         top
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lsquarci <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/01/09 17:06:22 by lsquarci          #+#    #+#             */
+/*   Updated: 2024/01/09 17:10:09 by lsquarci         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-	   The memcpy() function copies n bytes from memory area src to
-	   memory area dest. The memory areas must not overlap. Use
-	   memmove(3) if the memory areas do overlap. 
-	   The memcpy() function returns a pointer to dest.
-*/
+#include "libft.h"
 
-#include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
-
-void *ft_memcpy(void *dest, const void *src, size_t n)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	int i;
-	unsigned char *temp;
-	unsigned char *temp1;
-	
+	int				i;
+	unsigned char	*temp;
+	unsigned char	*temp1;
+
 	i = 0;
-	temp = (unsigned char *)dest; //cast per poterlo dereferenziare
+	temp = (unsigned char *)dest;
 	temp1 = (unsigned char *)src;
-	if (n == 0) 
-		return dest;	
+	if (n == 0)
+		return (dest);
 	while (i < n)
 	{
-		temp[i] = temp1[i];			 				
+		temp[i] = temp1[i];
 		i++;
 	}
-	return dest;
+	return (dest);
 }
 
-int main () 
+/*int main () 
 {
    const int src[4] = {1,2,3,4};
    int dest[10] = {9,9,9,9,9,9,9,9};
@@ -43,5 +45,4 @@ int main ()
    		printf(" %d",dest[i]);
       
    return(0);
-}
-
+}*/

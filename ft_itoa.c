@@ -1,10 +1,22 @@
-#include <stdlib.h>
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lsquarci <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/01/09 16:50:32 by lsquarci          #+#    #+#             */
+/*   Updated: 2024/01/09 16:54:06 by lsquarci         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-int ft_magnitude(int number)
+#include "libft.h"
+
+int	ft_magnitude(int number)
 {
-	int res = 0;
+	int	res;
 
+	res = 0;
 	while (number >= 1)
 		{
 			number = number / 10;
@@ -13,12 +25,15 @@ int ft_magnitude(int number)
 	return res;
 }
 
-int ft_iterative_power(int nb, int power)
+int	ft_iterative_power(int nb, int power)
 {
-    int result = 1;
-    if (nb == 0 && power == 0) 
-        return 0;
-    while (power >=1){
+    int result;
+	
+	result = 1;
+	if (nb == 0 && power == 0)
+		return 0;
+	while (power >=1)
+	{
         result = nb * result;
         power--;
     }
@@ -28,10 +43,10 @@ int ft_iterative_power(int nb, int power)
 char	*ft_itoa(int nbr)
 {
 	char	*result;
-	int	magnitude;
-	int i;
-	int power;
-	int sign;
+	int		magnitude;
+	int		i;
+	int		power;
+	int		sign;
 
 	i = 0;
 	sign = 0;
@@ -71,6 +86,6 @@ int main(void)
 	
 	stringa = ft_itoa(-2147483648);
 	printf("%s",stringa);
-	free(stringa);
+	//free(stringa);
 	return 0;
 }

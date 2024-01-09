@@ -1,7 +1,16 @@
-/*Lexicographical comparison between s1 and s2. If the 2
-strings are identical the function returns 1, or 0 otherwise*/
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strequ.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lsquarci <lsquarci@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/01/09 19:26:54 by lsquarci          #+#    #+#             */
+/*   Updated: 2024/01/09 19:26:54 by lsquarci         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 int ft_strequ(char const *s1, char const *s2)
 {

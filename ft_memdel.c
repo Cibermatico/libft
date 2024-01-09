@@ -1,8 +1,18 @@
-/*Takes as a parameter the address of a memory area that needs
-to be freed with free(3), then puts the pointer to NULL.*/
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memdel.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lsquarci <lsquarci@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/01/09 19:22:25 by lsquarci          #+#    #+#             */
+/*   Updated: 2024/01/09 19:22:25 by lsquarci         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
+
+
+#include "libft.h"
 
 void ft_memdel(void **ap)
 {

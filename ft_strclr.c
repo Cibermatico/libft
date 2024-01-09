@@ -1,6 +1,17 @@
-/*Sets every character of the string to the value ’\0’.*/
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strclr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lsquarci <lsquarci@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/01/09 19:25:52 by lsquarci          #+#    #+#             */
+/*   Updated: 2024/01/09 19:25:52 by lsquarci         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
+
 void ft_strclr(char *s)
 {
 	size_t	i;

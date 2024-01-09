@@ -1,9 +1,16 @@
-/*Allocates (with malloc(3)) and returns a “fresh” string ending with ’\0’. Each character of the string is 
-initialized at ’\0’. If the allocation fails the function returns NULL.*/
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strnew.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lsquarci <lsquarci@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/01/09 19:28:34 by lsquarci          #+#    #+#             */
+/*   Updated: 2024/01/09 19:28:34 by lsquarci         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
-
+#include "libft.h"
 void ft_strclr(char *s)
 {
 	size_t	i;

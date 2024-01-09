@@ -1,19 +1,17 @@
-#include <unistd.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lsquarci <lsquarci@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/01/09 19:23:33 by lsquarci          #+#    #+#             */
+/*   Updated: 2024/01/09 19:23:57 by lsquarci         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-void ft_putchar_fd(char c, int fd)
-{
-	write(fd,&c,1);
-}
+#include "libft.h"
 
-void ft_putstr_fd(char *s, int fd)
-{
-	size_t i = 0;
-	while (s[i] != '\0')
-	{
-		write(fd,&s[i],1);
-		i++;
-	}
-}
 void	ft_putnbr_fd(int n, int fd)
 {
 	if (n == -2147483648)

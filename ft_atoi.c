@@ -1,5 +1,16 @@
-#include <unistd.h>
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lsquarci <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/01/09 16:28:32 by lsquarci          #+#    #+#             */
+/*   Updated: 2024/01/09 16:28:47 by lsquarci         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_atoi(char *str)
 {
@@ -23,10 +34,10 @@ int	ft_atoi(char *str)
 	}
 	return (result * sign);
 }
-int main(void)
+/*int main(void)
 {
 	char stringa[] = "---1w";
 	printf("%d ",ft_atoi(stringa));
 
 	return 0;
-}
+}*/

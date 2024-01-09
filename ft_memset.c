@@ -1,46 +1,49 @@
-/*DESCRIPTION 
-	   The memset() function fills the first n bytes of the memory area
-	   pointed to by ptr with the constant byte x.
-RETURN VALUE
-	   The memset() function returns a pointer to the memory area ptr.*/
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lsquarci <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/01/09 16:31:23 by lsquarci          #+#    #+#             */
+/*   Updated: 2024/01/09 16:40:33 by lsquarci         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
-#include <string.h>	   
+#include "libft.h"
 
-void *ft_memset(void *ptr, int c, size_t n)
+void	*ft_memset(void *ptr, int c, size_t n)
 {
-	int i;
-	unsigned char *temp;
-	
+	int				i;
+	unsigned char	*temp;
+
 	i = 0;
-	temp = (unsigned char *)ptr; //cast per poterlo dereferenziare
-	if (ptr == NULL || n == 0) {
-        return ptr;
-    }
+	temp = (unsigned char *)ptr;
+	if (ptr == NULL || n == 0)
+	{
+		return (ptr);
+	}
 	while (i < n)
 	{
-		temp[i] = c;	/*poichè temp è una copia castata di ptr, se modifico i valori a cui punta posso
-		 				ritornare anche ptr, che punterà anch'esso ai valori modificati*/
+		temp[i] = c;
 		i++;
 	}
-	return ptr;
+	return (ptr);
 }
-void printArray(int arr[], int n) 
+/*void printArray(int arr[], int n) 
 { 
    for (int i=0; i<n; i++) 
-      printf("%c ", arr[i]); 
+	  printf("%c ", arr[i]); 
 } 
-
 int main() 
 { 
-    int b = 10; 
-    int arr[b]; 
+	int b = 10; 
+	int arr[b]; 
   
-    
-    ft_memset(arr, '.', b*sizeof(int)); 
-    
-    printArray(arr, b); 
+	
+	ft_memset(arr, '.', b*sizeof(int)); 
+	
+	printArray(arr, b); 
   
-    return 0; 
-} 
+	return 0; 
+} */

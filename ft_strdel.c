@@ -1,9 +1,16 @@
-/*Takes as a parameter the address of a string that need to be
-freed with free(3), then sets its pointer to NULL*/
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strdel.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lsquarci <lsquarci@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/01/09 19:26:08 by lsquarci          #+#    #+#             */
+/*   Updated: 2024/01/09 19:26:08 by lsquarci         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
 void ft_strdel(char **as)
 {

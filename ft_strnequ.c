@@ -1,9 +1,16 @@
-/*Lexicographical comparison between s1 and s2 up to n 
-characters or until a ’\0’ is reached. If the 2 strings are identical,
-the function returns 1, or 0 otherwise.*/
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strnequ.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lsquarci <lsquarci@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/01/09 19:28:23 by lsquarci          #+#    #+#             */
+/*   Updated: 2024/01/09 19:28:23 by lsquarci         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-#include <stdio.h>
-
+#include "libft.h"
 int ft_strnequ(char const *s1, char const *s2, size_t n)
 {
 	size_t i;

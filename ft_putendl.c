@@ -1,6 +1,18 @@
-/*Outputs the string s to the standard output followed by a ’\n’*/
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putendl.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lsquarci <lsquarci@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/01/09 19:23:13 by lsquarci          #+#    #+#             */
+/*   Updated: 2024/01/09 19:23:13 by lsquarci         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-#include <unistd.h>
+
+
+#include "libft.h"
 
 void ft_putendl(char const *s)
 {
