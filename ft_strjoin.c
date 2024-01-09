@@ -1,73 +1,46 @@
-#include <stdio.h>
 #include <stdlib.h>
+#include <stdio.h>
 
-int		ft_strlen(char *str)
+int	ft_strlen(const char *str)
 {
-	int i;
+	size_t	i;
 
 	i = 0;
-	while (*(str + i) != '\0')
+	while (str[i] != '\0')
 		i++;
 	return (i);
 }
-
-char *ft_strjoin(int size, char **strs, char *sep)
+char *ft_strjoin(char const *s1, char const *s2)
 {
-	int sep_len = 0;
-	int first_str_len = 0;
-	int t = 0;
-	int i = 0;
-	int j = 0;
-	int k = 0;
-	int f = 0;
-	int total_lenght = 0;
-	char *result;
+	char	*result;
+	size_t	i;
+	size_t	j;
+	unsigned int	len_s1;
+	unsigned int	len_s2;
 
-	while(i < size)
-	{	
-		while (strs[i][j] != '\0')
-		{
-			j++;
-		}
-		total_lenght = total_lenght + j;
-		i++;
-		j = 0;
-	}
-	//printf("size = %d\n",total_lenght);
-
-	sep_len = ft_strlen(sep);	
-
-	result = (char *)malloc((total_lenght) * sizeof(char) + (sep_len * (size - 1)) * sizeof(char));
-	i = 0;
-	while (i < size)
+	i = 0;	
+	len_s1 = ft_strlen(s1);
+	len_s2 = ft_strlen(s2);
+	j = len_s1;
+	result = (char *)malloc(sizeof(char) * (len_s1 + len_s2) + 1);
+	while (i <= len_s1)
 	{
-		while (strs[i][j] != '\0')
-		{		
-			result[k] = strs[i][j];
-			j++;
-			k++;
-			t = 0;			
-		}
-		while( (t < sep_len))
-			{				
-				result[k] = sep[t];     //carica il separatore 
-				t++;
-				k++; 
-			}
-		j = 0;
+		result[i] = s1[i];
 		i++;
 	}
-	result[k] = '\0';
+	i = 0;
+	while (i <= len_s2)
+		result[j++] = s2[i++];
+	result[j] = '\0';
 	return result;
 }
 
-int main(void)
+/*int main(void)
 {
-	char *separator = "!!";
-	char *matrice[] = {"Risolto", "sto", "cazzo", "di", "strjoin!"};
-	char *array = ft_strjoin(5, matrice,separator);
-	
-	printf("%s",array);	
+	const char *stringa1 = "sto";
+	const char *stringa2 = "cazzo";
 
+	char *result = ft_strjoin(stringa1,stringa2);
+	printf("%s", result);
 	return 0;
-}
+	}*/
