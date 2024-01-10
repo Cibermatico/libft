@@ -6,11 +6,12 @@
 /*   By: lsquarci <lsquarci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 16:41:31 by lsquarci          #+#    #+#             */
-/*   Updated: 2024/01/09 19:20:02 by lsquarci         ###   ########.fr       */
+/*   Updated: 2024/01/10 09:04:31 by lsquarci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
 int	ft_isalnum(unsigned char c)
 {
 	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z')

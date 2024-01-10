@@ -12,19 +12,19 @@
 
 #include "libft.h"
 
-void ft_strdel(char **as)
+void	ft_strdel(char **as)
 {
-    free(*as);
-    *as = NULL;
+	free(*as);
+	*as = NULL;
 }
 
-int main(void)
+/*int main(void)
 {
 	char *array = (char *)malloc(5*sizeof(char));
 	int i = 0;
-     
-    strcpy(array,"ciao");
-    ft_strdel(&array);  
+	 
+	strcpy(array,"ciao");
+	ft_strdel(&array);  
 	printf("\n %s ", array);
 	return 0;
-}
+}*/

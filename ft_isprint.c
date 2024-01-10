@@ -6,11 +6,12 @@
 /*   By: lsquarci <lsquarci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 16:49:24 by lsquarci          #+#    #+#             */
-/*   Updated: 2024/01/09 19:21:30 by lsquarci         ###   ########.fr       */
+/*   Updated: 2024/01/10 09:06:05 by lsquarci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
 int	ft_isprint(unsigned char c)
 {
 	if ((c >= 32 && c <= 126))

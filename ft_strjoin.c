@@ -6,30 +6,21 @@
 /*   By: lsquarci <lsquarci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 19:27:21 by lsquarci          #+#    #+#             */
-/*   Updated: 2024/01/09 19:27:25 by lsquarci         ###   ########.fr       */
+/*   Updated: 2024/01/10 10:20:44 by lsquarci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strlen(const char *str)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	size_t	i;
-
-	i = 0;
-	while (str[i] != '\0')
-		i++;
-	return (i);
-}
-char *ft_strjoin(char const *s1, char const *s2)
-{
-	char	*result;
-	size_t	i;
-	size_t	j;
+	char			*result;
+	size_t			i;
+	size_t			j;
 	unsigned int	len_s1;
 	unsigned int	len_s2;
 
-	i = 0;	
+	i = 0;
 	len_s1 = ft_strlen(s1);
 	len_s2 = ft_strlen(s2);
 	j = len_s1;
@@ -43,7 +34,7 @@ char *ft_strjoin(char const *s1, char const *s2)
 	while (i <= len_s2)
 		result[j++] = s2[i++];
 	result[j] = '\0';
-	return result;
+	return (result);
 }
 
 /*int main(void)

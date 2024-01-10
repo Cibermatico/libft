@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-void ft_strclr(char *s)
+void	ft_strclr(char *s)
 {
 	size_t	i;
 
@@ -24,11 +24,11 @@ void ft_strclr(char *s)
 	}
 }
 
-int main(void)
+/*int main(void)
 {
 	char stringa1[] = "ab123";
 	ft_strclr(stringa1);
 	printf("%s ",stringa1);
 	printf("%d", sizeof(stringa1));
 	return 0;
-}
+}*/

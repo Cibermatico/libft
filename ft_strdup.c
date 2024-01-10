@@ -13,31 +13,30 @@
 #include "libft.h"
 
 char	*ft_strdup(char *src)
+{
+	int		i;
+	int		j;
+	char	*copy;
+
+	i = 0;
+	j = 0;
+	while (src[i] != '\0')
 	{
-		int	i;
-		int	j;
-
-		i = 0;
-		j = 0;
-		while (src[i] != '\0')
-			{
-				i++;
-			}
-		char *copy;
-		copy = (char*)malloc(i * sizeof(char));
-		while (j <= i)
-		{
-			copy[j] = src[j];
-			j++;
-		}
-		printf("%d, %d\n", i, j);
-		copy[i] = '\0';
-	return (copy);
+		i++;
 	}
+	copy = (char *)malloc(i * sizeof(char));
+	while (j <= i)
+	{
+		copy[j] = src[j];
+		j++;
+	}
+	copy[i] = '\0';
+	return (copy);
+}
 
-int main(void)
+/*int main(void)
 	{
 		char *array = "ciao1";
 		printf("%s", ft_strdup(array));
 		return 0;
-	}
+	}*/

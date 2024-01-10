@@ -6,17 +6,20 @@
 /*   By: lsquarci <lsquarci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 19:24:08 by lsquarci          #+#    #+#             */
-/*   Updated: 2024/01/09 19:24:12 by lsquarci         ###   ########.fr       */
+/*   Updated: 2024/01/10 10:05:07 by lsquarci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-void ft_putstr_fd(char *s, int fd)
+
+void	ft_putstr_fd(char *s, int fd)
 {
-	size_t i = 0;
+	size_t	i;
+
+	i = 0;
 	while (s[i] != '\0')
 	{
-		write(fd,&s[i],1);
+		write(fd, &s[i], 1);
 		i++;
 	}
 }

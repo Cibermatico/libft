@@ -19,7 +19,7 @@ void *ft_memccpy(void *dest, const void *src, int c, size_t n)
 	unsigned char *temp1;
 	
 	i = 0;
-	temp = (unsigned char *)dest; //cast per poterlo dereferenziare
+	temp = (unsigned char *)dest;
 	temp1 = (unsigned char *)src;
 	if (n == 0) 
 		return dest;	
@@ -28,15 +28,15 @@ void *ft_memccpy(void *dest, const void *src, int c, size_t n)
 	{
 		temp[i] = temp1[i];			 				
 		i++;
-        dest++;                     // = (void *)((char *)dest + 1);
+        dest++;
 	}    
 	if (i < n)
-        return dest; // restituisci il puntatore al carattere trovato in dest
+        return dest;
     else
         return NULL;
 }
 
-int main () //funziona
+/*int main ()
 {
    const char src[4] = {1,2,3,4};
    char dest[10] = {9,9,9,'7',9,9,9,9};
@@ -45,11 +45,11 @@ int main () //funziona
    for (int i = 0; i < 8; i++)
    		printf(" %d",dest[i]);
 	puts("\n");
-   out = ft_memccpy(dest, src, '7', 4*sizeof(char));   //ok, ricordarsi che sizeof(int) = 4
+   out = ft_memccpy(dest, src, '7', 4*sizeof(char));
    puts("Dopo ft_memccpy:");
    for (int i = 0; i < 8; i++)
    		printf(" %d",dest[i]);      
     printf("\n%c",*out);
 
    return(0);
-}
+}*/

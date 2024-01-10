@@ -6,11 +6,12 @@
 /*   By: lsquarci <lsquarci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 16:11:57 by lsquarci          #+#    #+#             */
-/*   Updated: 2024/01/09 19:27:37 by lsquarci         ###   ########.fr       */
+/*   Updated: 2024/01/10 10:20:53 by lsquarci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
 unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 {
 	unsigned int	dst_size;

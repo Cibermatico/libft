@@ -6,12 +6,13 @@
 /*   By: lsquarci <lsquarci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 19:30:01 by lsquarci          #+#    #+#             */
-/*   Updated: 2024/01/09 19:30:02 by lsquarci         ###   ########.fr       */
+/*   Updated: 2024/01/10 11:15:15 by lsquarci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-int ft_islower(unsigned char c)
+
+static int	ft_islower(unsigned char c)
 {
 	if (c >= 97 && c <= 122)
 		return (1);
@@ -19,11 +20,10 @@ int ft_islower(unsigned char c)
 		return (0);
 }
 
-
-int ft_toupper(int c)
+int	ft_toupper(int c)
 {
 	if (ft_islower(c))
 		return (c - 32);
 	else
-		return (c); 
+		return (c);
 }

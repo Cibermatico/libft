@@ -14,9 +14,9 @@
 
 char	*ft_strrev(char *str)
 {
-	int i;
-	int len;
-	char tmp;
+	int		i;
+	int		len;
+	char	tmp;
 
 	i = 0;
 	len = ft_strlen(str) - 1;
@@ -31,9 +31,9 @@ char	*ft_strrev(char *str)
 	return (str);
 }
 
-int main(void)
+/*int main(void)
 {
 	char *stringa = "abcdef";
 	printf("%s",ft_strrev(stringa));
 	return 0;	
-}
+}*/

@@ -6,7 +6,7 @@
 /*   By: lsquarci <lsquarci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 19:28:43 by lsquarci          #+#    #+#             */
-/*   Updated: 2024/01/09 19:28:44 by lsquarci         ###   ########.fr       */
+/*   Updated: 2024/01/10 10:30:24 by lsquarci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,7 @@ char	*ft_strnstr(char *haystack, char *needle, size_t len)
 		find_size++;
 	if (find_size == 0)
 		return (haystack);
-    
-while ((haystack[i] != '\0') && (i < len))
+	while ((haystack[i] != '\0') && (i < len))
 	{
 		while (needle[z] == haystack[i + z])
 		{
@@ -37,7 +36,5 @@ while ((haystack[i] != '\0') && (i < len))
 		z = 0;
 		i++;
 	}
-	return NULL;
+	return (NULL);
 }
-
-

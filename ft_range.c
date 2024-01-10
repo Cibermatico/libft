@@ -10,29 +10,28 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "libft.h"
 
-int *ft_range(int min, int max)
+int	*ft_range(int min, int max)
 {
 	int *result;
 	int dim;
 
 	dim = max - min;
-	result = (int*)malloc((dim) * sizeof(int));		
+	result = (int *)malloc((dim) * sizeof(int));		
 
 	dim = 0;
 	while (min < max)
 	{
 		result[dim] = min;
 		dim++;
-		min++;		
-	}
+		min++;
+		}
 	return (result);
 }
 
 
-int main(void)
+/*int main(void)
 {
 	int	min;
 	int	max;
@@ -49,5 +48,5 @@ int main(void)
 		printf("%d, ", tab[i]);
 		i++;
 	}
-}
+}*/
 	

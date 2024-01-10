@@ -6,30 +6,21 @@
 /*   By: lsquarci <lsquarci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 19:28:05 by lsquarci          #+#    #+#             */
-/*   Updated: 2024/01/09 19:28:06 by lsquarci         ###   ########.fr       */
+/*   Updated: 2024/01/10 10:23:51 by lsquarci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-int	ft_strlen(const char *str)
-{
-	size_t	i;
 
-	i = 0;
-	while (str[i] != '\0')
-		i++;
-	return (i);
-}
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	size_t i;
-	char *result;
+	size_t	i;
+	char	*result;
 
 	i = 0;
 	if (!s || !f)
 		return ;
 	result = (char *)malloc(ft_strlen(s) + 1);
-	
 	if (result == NULL)
 		return (NULL);
 	while (s[i] != '\0')

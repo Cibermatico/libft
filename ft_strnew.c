@@ -11,33 +11,23 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-void ft_strclr(char *s)
-{
-	size_t	i;
 
-	i = 0;
-	while (s[i] != '\0')
-	{
-		s[i] = '\0';
-		i++;
-	}
-}
-
-char * ft_strnew(size_t size)
+char	*ft_strnew(size_t size)
 {
-	char *stringa;
+	char	*stringa;
+
 	stringa = (char *)malloc(size * sizeof(char));
 	if (!stringa)
-		return NULL;
+		return (NULL);
 	ft_strclr(stringa);
-	return stringa;	
+	return (stringa);
 }
 
-int main(void)
+/*int main(void)
 {
 	char *stringa1;
 	stringa1 = ft_strnew(10);
 	printf("%s ",stringa1);
 	//printf("%d", ft_strlen(stringa1));
 	return 0;
-}
+}*/
