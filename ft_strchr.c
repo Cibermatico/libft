@@ -16,7 +16,7 @@ char	*ft_strchr(const char *str, int c)
 {
 	while (*str != '\0')
 	{
-		if (*str == c)
+		if (*str == (char)c)
 			return ((unsigned char *)str);
 		str++;
 	}

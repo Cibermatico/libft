@@ -12,28 +12,27 @@
 
 #include "libft.h"
 
-void *ft_memccpy(void *dest, const void *src, int c, size_t n)
+void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 {
-    int i;
-	unsigned char *temp;
-	unsigned char *temp1;
-	
+	int				i;
+	unsigned char	*temp;
+	unsigned char	*temp1;
+
 	i = 0;
 	temp = (unsigned char *)dest;
 	temp1 = (unsigned char *)src;
-	if (n == 0) 
-		return dest;	
-    
+	if (n == 0)
+		return (dest);
 	while ((i < n) && (temp[i] != c))
 	{
-		temp[i] = temp1[i];			 				
+		temp[i] = temp1[i];
 		i++;
-        dest++;
-	}    
+		dest++;
+	}
 	if (i < n)
-        return dest;
-    else
-        return NULL;
+		return (dest);
+	else
+		return (NULL);
 }
 
 /*int main ()
@@ -49,7 +48,7 @@ void *ft_memccpy(void *dest, const void *src, int c, size_t n)
    puts("Dopo ft_memccpy:");
    for (int i = 0; i < 8; i++)
    		printf(" %d",dest[i]);      
-    printf("\n%c",*out);
+	printf("\n%c",*out);
 
    return(0);
 }*/

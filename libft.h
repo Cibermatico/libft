@@ -6,7 +6,7 @@
 /*   By: lsquarci <lsquarci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 18:46:50 by lsquarci          #+#    #+#             */
-/*   Updated: 2024/01/10 09:02:53 by lsquarci         ###   ########.fr       */
+/*   Updated: 2024/01/10 15:22:22 by lsquarci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,7 @@
 # include <string.h>
 # include <stdlib.h>
 # include <unistd.h>
-
-# include <string.h>
-# include <stdlib.h>
+# include <stdio.h>
 
 int				ft_atoi(char *str);
 void			ft_striteri(char *s, void (*f)(unsigned int, char*));
