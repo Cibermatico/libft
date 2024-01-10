@@ -12,33 +12,47 @@
 
 #include "libft.h"
 
-int	ft_magnitude(int number)
+static int	ft_magnitude(int number)
 {
 	int	res;
 
 	res = 0;
 	while (number >= 1)
-		{
-			number = number / 10;
-			res = res + 1;
-		}
-	return res;
+	{
+		number = number / 10;
+		res = res + 1;
+	}
+	return (res);
 }
 
-int	ft_iterative_power(int nb, int power)
+static int	ft_iterative_power(int nb, int power)
 {
-    int result;
-	
+	int	result;
+
 	result = 1;
 	if (nb == 0 && power == 0)
-		return 0;
-	while (power >=1)
+		return (0);
+	while (power >= 1)
 	{
-        result = nb * result;
-        power--;
-    }
-    return result;   
-}    
+		result = nb * result;
+		power--;
+	}
+	return (result);
+}
+
+static void	initialize(int *a, int *b, int *c)
+{
+	*a = 0;
+	*b = 0;
+	*c = 0;
+}
+
+static void	sign_handle(int *a, int *b, int *c)
+{
+	*a = -*a;
+	*b = 1;
+	*c = 1;
+}
 
 char	*ft_itoa(int nbr)
 {
@@ -48,44 +62,31 @@ char	*ft_itoa(int nbr)
 	int		power;
 	int		sign;
 
-	i = 0;
-	sign = 0;
-	power = 0;
+	initialize(&i, &power, &sign);
 	if (nbr == -2147483648)
-		result = "-2147483648";
-	else
+		return ("-2147483648");
+	if (nbr < 0)
+		sign_handle(&nbr, &sign, &i);
+	result = (char *)malloc((ft_magnitude(nbr) + 1 + sign) * sizeof(char));
+	if (!result)
+		return (NULL);
+	power = ft_iterative_power(10, ft_magnitude(nbr) - 1);
+	while (power >= 1)
 	{
-		if (nbr < 0)
-		{
-			nbr = - nbr;
-			sign = 1;
-			i = 1;
-		}
-		magnitude = ft_magnitude(nbr) - 1;			
-		result = (char *)malloc((magnitude + 2 + sign) * sizeof(char));
-		if (!result)
-			return NULL;
-		power = ft_iterative_power(10,magnitude);
-		while (power >= 1)
-		{	
-			result[i] = (nbr / power) + 48;
-			nbr = nbr % power;
-			i++;
-			power = power / 10;		
-		}
-		if (sign == 1)
-			*result = '-';
-		result[i] = '\0';
-		}
+		result[i++] = (nbr / power) + 48;
+		nbr = nbr % power;
+		power = power / 10;
+	}
+	if (sign == 1)
+		*result = '-';
+	result[i] = '\0';
 	return (result);
 }
-
-int main(void)
+/*int	main(void)
 {
-	char *stringa;
-	
-	stringa = ft_itoa(-2147483648);
-	printf("%s",stringa);
-	//free(stringa);
-	return 0;
-}
+	char	*stringa;
+
+	stringa = ft_itoa(2147483647);
+	printf("%s", stringa);
+	return (0);
+}*/
