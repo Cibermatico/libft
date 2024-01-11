@@ -19,7 +19,7 @@ RETURN: none*/
 
 void	ft_bzero(void *s, size_t n)
 {
-	int				i;
+	size_t			i;
 	unsigned char	*temp;
 
 	i = 0;

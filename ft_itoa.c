@@ -57,7 +57,6 @@ static void	sign_handle(int *a, int *b, int *c)
 char	*ft_itoa(int nbr)
 {
 	char	*result;
-	int		magnitude;
 	int		i;
 	int		power;
 	int		sign;

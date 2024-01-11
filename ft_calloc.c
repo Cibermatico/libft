@@ -6,11 +6,11 @@
 /*   By: lsquarci <lsquarci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 17:34:23 by lsquarci          #+#    #+#             */
-/*   Updated: 2024/01/10 18:20:41 by lsquarci         ###   ########.fr       */
+/*   Updated: 2024/01/11 14:41:36 by lsquarci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 void	*ft_calloc(size_t count, size_t size)
 {

@@ -6,7 +6,7 @@
 /*   By: lsquarci <lsquarci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 16:02:12 by lsquarci          #+#    #+#             */
-/*   Updated: 2024/01/10 17:10:05 by lsquarci         ###   ########.fr       */
+/*   Updated: 2024/01/11 14:44:40 by lsquarci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	int					i;
+	size_t				i;
 	const unsigned char	*temp1;
 	const unsigned char	*temp2;
 

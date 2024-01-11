@@ -6,7 +6,7 @@
 /*   By: lsquarci <lsquarci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 19:27:15 by lsquarci          #+#    #+#             */
-/*   Updated: 2024/01/10 10:09:39 by lsquarci         ###   ########.fr       */
+/*   Updated: 2024/01/11 15:13:36 by lsquarci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,10 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 	size_t	i;
 
 	i = 0;
-	if (!s || !f)
-		return ;
-	while (s[i] != '\0')
+	while (*s != '\0')
 	{
-		f(i, s[i]);
+		f(i, s);
 		i++;
+		s++;
 	}
 }
