@@ -18,18 +18,14 @@ void	*ft_memset(void *ptr, int c, size_t n)
 	unsigned char	*temp;
 
 	i = 0;
-	temp = (unsigned char *)ptr;
-	if (ptr == NULL || n == 0)
-	{
-		return (ptr);
-	}
+	temp = (unsigned char *)ptr;	
 	while (i < n)
 	{
 		temp[i] = c;
 		i++;
 	}
 	return (ptr);
-}
+	}
 /*void printArray(int arr[], int n) 
 { 
    for (int i=0; i<n; i++) 

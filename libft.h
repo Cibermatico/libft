@@ -6,7 +6,7 @@
 /*   By: lsquarci <lsquarci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 18:46:50 by lsquarci          #+#    #+#             */
-/*   Updated: 2024/01/11 14:59:31 by lsquarci         ###   ########.fr       */
+/*   Updated: 2024/01/11 18:34:03 by lsquarci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void			ft_putnbr_fd(int n, int fd);
 void			ft_putstr_fd(char *s, int fd);
 size_t			ft_strlen(const char *str);
 size_t			ft_strlcat(char *dest, const char *src, unsigned int size);
-size_t			ft_strlcpy(char *dest, const char *src, unsigned int size);
+size_t			ft_strlcpy(char *dest, const char *src, size_t size);
 int				ft_atoi(char *str);
 void			ft_striteri(char *s, void (*f)(unsigned int, char*));
 char			*ft_strjoin(char const *s1, char const *s2);
@@ -49,7 +49,7 @@ int				ft_strequ(char const *s1, char const *s2);
 void			ft_striteri(char *s, void (*f)(unsigned int, char*));
 char			*ft_strjoin(char const *s1, char const *s2);
 char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
-int				ft_strncmp(char *s1, char *s2, unsigned int n);
+int				ft_strncmp(const char *s1, const char *s2, size_t n);
 int				ft_strnequ(char const *s1, char const *s2, size_t n);
 char			*ft_strnew(size_t size);
 char			*ft_strnstr(char *haystack, char *needle, size_t len);

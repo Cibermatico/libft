@@ -6,7 +6,7 @@
 /*   By: lsquarci <lsquarci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 16:02:12 by lsquarci          #+#    #+#             */
-/*   Updated: 2024/01/11 14:44:40 by lsquarci         ###   ########.fr       */
+/*   Updated: 2024/01/11 17:42:10 by lsquarci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	temp1 = (const unsigned char *)s1;
 	temp2 = (const unsigned char *)s2;
 	i = 0;
-	while (i <= n)
+	while (i < n)
 	{
 		if (temp1[i] == temp2[i])
 			i++;
