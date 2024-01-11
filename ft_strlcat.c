@@ -6,22 +6,28 @@
 /*   By: lsquarci <lsquarci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 16:11:57 by lsquarci          #+#    #+#             */
-/*   Updated: 2024/01/11 14:51:28 by lsquarci         ###   ########.fr       */
+/*   Updated: 2024/01/11 19:35:40 by lsquarci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+static void	zero(unsigned int *a, unsigned int *b)
+{
+	*a = 0;
+	*b = 0;	
+}
 size_t	ft_strlcat(char *dest, const char *src, unsigned int size)
 {
 	unsigned int	dst_size;
 	unsigned int	src_size;
 	unsigned int	result;
 
-	dst_size = 0;
+	zero(&dst_size, &src_size);
+	if (!dest && size == 0)
+		return (0);
 	while (dest[dst_size] != '\0')
-		++dst_size;
-	src_size = 0;
+		++dst_size;	
 	while (src[src_size] != '\0')
 		++src_size;
 	result = src_size;

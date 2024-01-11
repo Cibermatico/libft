@@ -6,7 +6,7 @@
 /*   By: lsquarci <lsquarci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 18:46:50 by lsquarci          #+#    #+#             */
-/*   Updated: 2024/01/11 18:34:03 by lsquarci         ###   ########.fr       */
+/*   Updated: 2024/01/11 20:10:55 by lsquarci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 int				ft_strncmp(const char *s1, const char *s2, size_t n);
 int				ft_strnequ(char const *s1, char const *s2, size_t n);
 char			*ft_strnew(size_t size);
-char			*ft_strnstr(char *haystack, char *needle, size_t len);
+char			*ft_strnstr(const char *haystack, const char *needle, size_t len);
 char			*ft_strrchr(const char *str, int c);
 char			*ft_strrev(char *str);
 char			*ft_strtrim(char const *s1, char const *set);
