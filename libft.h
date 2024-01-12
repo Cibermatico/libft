@@ -6,7 +6,7 @@
 /*   By: lsquarci <lsquarci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 18:46:50 by lsquarci          #+#    #+#             */
-/*   Updated: 2024/01/11 20:10:55 by lsquarci         ###   ########.fr       */
+/*   Updated: 2024/01/12 11:55:23 by lsquarci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void			ft_putendl(char const *s);
 void			ft_putnbr_fd(int n, int fd);
 void			ft_putstr_fd(char *s, int fd);
 size_t			ft_strlen(const char *str);
-size_t			ft_strlcat(char *dest, const char *src, unsigned int size);
+size_t			ft_strlcat(char *dest, const char *src, size_t size);
 size_t			ft_strlcpy(char *dest, const char *src, size_t size);
 int				ft_atoi(char *str);
 void			ft_striteri(char *s, void (*f)(unsigned int, char*));

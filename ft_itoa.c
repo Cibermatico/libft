@@ -17,6 +17,8 @@ static int	ft_magnitude(int number)
 	int	res;
 
 	res = 0;
+	if (number == 0)
+		return (1);
 	while (number >= 1)
 	{
 		number = number / 10;
@@ -30,8 +32,8 @@ static int	ft_iterative_power(int nb, int power)
 	int	result;
 
 	result = 1;
-	if (nb == 0 && power == 0)
-		return (0);
+	if (power == 0)
+		return (1);
 	while (power >= 1)
 	{
 		result = nb * result;
@@ -63,7 +65,7 @@ char	*ft_itoa(int nbr)
 
 	initialize(&i, &power, &sign);
 	if (nbr == -2147483648)
-		return ("-2147483648");
+		return (ft_strdup("-2147483648"));
 	if (nbr < 0)
 		sign_handle(&nbr, &sign, &i);
 	result = (char *)malloc((ft_magnitude(nbr) + 1 + sign) * sizeof(char));
@@ -85,7 +87,7 @@ char	*ft_itoa(int nbr)
 {
 	char	*stringa;
 
-	stringa = ft_itoa(2147483647);
+	stringa = ft_itoa(0);
 	printf("%s", stringa);
 	return (0);
 }*/

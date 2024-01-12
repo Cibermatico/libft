@@ -6,7 +6,7 @@
 /*   By: lsquarci <lsquarci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 19:27:21 by lsquarci          #+#    #+#             */
-/*   Updated: 2024/01/10 10:20:44 by lsquarci         ###   ########.fr       */
+/*   Updated: 2024/01/12 08:39:42 by lsquarci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	len_s2 = ft_strlen(s2);
 	j = len_s1;
 	result = (char *)malloc(sizeof(char) * (len_s1 + len_s2) + 1);
+	if (!result)
+		return (NULL);
 	while (i <= len_s1)
 	{
 		result[i] = s1[i];
@@ -39,8 +41,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 /*int main(void)
 {
-	const char *stringa1 = "sto";
-	const char *stringa2 = "cazzo";
+	const char *stringa1 = "abc";
+	const char *stringa2 = "1234";
 
 	char *result = ft_strjoin(stringa1,stringa2);
 	printf("%s", result);
