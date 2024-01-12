@@ -19,11 +19,10 @@ char	*ft_strchr(const char *str, int c)
 		str++;
 	}
 	if (*str == c)
-	{
 		return ((char *)str);
-	}
-	return ((char*)NULL);
+	return ((char *)(NULL));
 }
+
 /*int main(void)
 {
 	char stringa1[] = "ciaooo";	

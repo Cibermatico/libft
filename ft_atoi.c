@@ -27,8 +27,7 @@ int	ft_atoi(char *str)
 		str++;
 	}
 	else if (*str == '+')
-		str++; 	
-	
+		str++;
 	while (*str >= '0' && *str <= '9')
 	{
 		result = result * 10 + *str - '0';
@@ -36,7 +35,6 @@ int	ft_atoi(char *str)
 	}
 	return (result * sign);
 }
-
 /*int main(void)
 {
 	char stringa[] = "--54";

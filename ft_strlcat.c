@@ -6,49 +6,47 @@
 /*   By: lsquarci <lsquarci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 16:11:57 by lsquarci          #+#    #+#             */
-/*   Updated: 2024/01/12 12:41:31 by lsquarci         ###   ########.fr       */
+/*   Updated: 2024/01/12 13:49:03 by lsquarci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static void	zero(size_t *a, size_t *b)
+static size_t	lenght(char const *str)
 {
-	*a = 0;
-	*b = 0;	
-}
-size_t	ft_strlcat(char *dest, const char *src, size_t size)
-{
-	size_t	dst_size;
-	size_t	src_size;
-	size_t	result;
+	size_t	i;
 
-	zero(&dst_size, &src_size);
-	
-	if (!dest && !src)
-		return (0);
-	while (dest[dst_size] != '\0')
-		++dst_size;	
-	while (src[src_size] != '\0')
-		++src_size;
-	if (size == 0)
-		return (src_size);	
-	result = src_size;
-	if (size <= dst_size)
-		result += size;
-	else
-		result += dst_size;
-	src_size = 0;
-	while (src[src_size] != '\0' && dst_size + 1 < size)
-	{
-		dest[dst_size] = src[src_size];
-		dst_size++;
-		src_size++;
-	}
-	dest[dst_size] = '\0';
-	return (result);
+	i = 0;
+	while (*(str + i))
+		i++;
+	return (i);
 }
-void	ft_print_result(int n)
+
+size_t	ft_strlcat(char *dest, const char *src, size_t n)
+{
+	size_t		dest_len;
+	size_t		total_len;
+	const char	*s;
+
+	if ((!dest || !src) && !n)
+		return (0);
+	s = src;
+	dest_len = 0;
+	while (*(dest + dest_len) && dest_len < n)
+		dest_len++;
+	if (dest_len < n)
+		total_len = dest_len + lenght(s);
+	else
+		return (n + lenght(s));
+	while (*s && (dest_len + 1) < n)
+	{
+		*(dest + dest_len) = *s++;
+		dest_len++;
+	}
+	*(dest + dest_len) = '\0';
+	return (total_len);
+}
+/*void	ft_print_result(int n)
 {
 	char c;
 
@@ -73,4 +71,4 @@ int		main(int argc, const char *argv[])
 	
 	
 	return (0);
-}
+}*/
